@@ -1,3 +1,4 @@
+% DAQのdigital i/oを使ってスイッチＯＮＯＦＦの判定に使用するプログラム
 % DAQセッション作成（オンデマンドモード）
 s = daq("ni");
 addinput(s, "Dev3", "port0/line0", "Digital");
