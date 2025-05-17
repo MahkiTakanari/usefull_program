@@ -1,11 +1,11 @@
 % VISAリソース名（NI MAXで確認したものに合わせて書き換え）
-% visaAddress = "USB0::0x0D4A::0x000E::9113588::INSTR";  % 例：WF1974
-% 
-% % visadevオブジェクト作成
-% dev = visadev(visaAddress);
-% 
-% % 終端文字の設定（WF1974はLFが必要）
-% configureTerminator(dev, "LF");
+visaAddress = "USB0::0x0D4A::0x000E::9113588::INSTR";  % 例：WF1974
+
+% visadevオブジェクト作成
+dev = visadev(visaAddress);
+
+% 終端文字の設定（WF1974はLFが必要）
+configureTerminator(dev, "LF");
 
 
 
@@ -60,10 +60,6 @@ writeline(dev, ":OUTP OFF");
 % end
 % dev = visadev("USB0::0x0D4A::0x000E::9113588::0::INSTR");
 
-% writeline(dev, '*RST')
-% writeline(dev, ':OUTP:SCAL SIN,PFS');
-% writeline(dev, ':FREQ 10')
-% writeline(dev, ':VOLT:AMPL 3.0')
 
 
 
